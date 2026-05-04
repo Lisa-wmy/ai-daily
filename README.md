@@ -104,7 +104,3 @@ pip install requests feedparser
 生成的是英文页面。用 **Edge 浏览器**打开 `AI日报-YYYYMMDD.html`，点击地址栏右侧的翻译图标，一键翻译全页。
 
 ---
-
-## 授权
-
-MIT License · 欢迎自由使用、修改和分享
