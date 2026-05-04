@@ -1,48 +1,48 @@
-# AI-Daily · 每日AI资讯日报
+# AI-Daily · Daily AI Industry News
 
-为 Claude Code 打造的每日AI行业资讯技能，联网抓取近30天真实新闻，生成精美HTML卡片界面。
-
----
-
-## 功能特性
-
-- **实时资讯**：自动抓取近30天AI行业新闻（来源：TechCrunch、The Verge、Wired、Ars Technica等）
-- **智能分类**：每条新闻自动打上1-3个专业标签
-- **筛选导航**：顶部标签按钮，点击即可筛选对应类别
-- **公司追踪**：自动识别新闻涉及的公司（OpenAI、Google、Nvidia等）
-- **重点标记**：重要新闻（融资/监管/大模型发布）自动标红突出
-- **双语支持**：生成英文页面，用Edge浏览器一键翻译为中文
+A Claude Code skill that fetches real AI industry news from the last 30 days and generates a beautiful HTML card interface.
 
 ---
 
-## 安装
+## Features
 
-### 方式一：Git 克隆（推荐）
+- **Real-time News**: Fetches AI news from the past 30 days (sources: TechCrunch, The Verge, Wired, Ars Technica, and more)
+- **Smart Tagging**: Each article auto-tagged with 1-3 professional labels
+- **Filter Navigation**: Top tag buttons — click to filter by category
+- **Company Tracking**: Auto-identifies companies mentioned (OpenAI, Google, Nvidia, etc.)
+- **Important News Highlight**: Major events (funding/regulation/model releases) are marked in red
+- **Bilingual Ready**: English pages with one-click translation via Edge browser
+
+---
+
+## Installation
+
+### Option 1: Git Clone (Recommended)
 
 ```bash
-git clone https://github.com/Lisa-wmy/JOB-SKILL.git ~/.claude/skills/ai-daily
+git clone https://github.com/Lisa-wmy/ai-daily.git ~/.claude/skills/ai-daily
 ```
 
-### 方式二：手动下载
+### Option 2: Manual Download
 
-下载整个仓库，将文件夹重命名为 `ai-daily`，放入 Claude Code 的 skills 目录：
+Download the repo, rename the folder to `ai-daily`, and place it in your Claude Code skills directory:
 ```
 ~/.claude/skills/ai-daily/
 ```
 
 ---
 
-## 配置 NewsAPI Key
+## Configure NewsAPI Key
 
-1. 访问 https://newsapi.org 注册免费账号
-2. 获取你的 API Key
-3. 使用技能时，Claude Code 会自动询问你输入 Key
+1. Visit https://newsapi.org and register a free account
+2. Copy your API Key
+3. On first use, Claude Code will prompt you to enter the Key
 
 ---
 
-## 使用方法
+## Usage
 
-在 Claude Code 中直接说：
+Simply say in Claude Code:
 
 ```
 AI日报
@@ -51,47 +51,54 @@ AI资讯
 AI行业动态
 ```
 
-Claude Code 会自动引导你完成以下三步：
-
-1. **询问 NewsAPI Key**（首次使用时）
-2. **运行抓取脚本**：下载近30天AI新闻
-3. **运行生成脚本**：输出精美HTML日报
-
-生成文件为 `AI日报-YYYYMMDD.html`，用浏览器打开即可阅读。
-
----
-
-## 新闻标签体系
-
-| 标签 | 说明 |
-|------|------|
-| AI模型与技术 | 大模型发布、benchmark、研究突破 |
-| AI基础设施 | 数据中心、GPU、芯片、云服务 |
-| AI融资与估值 | 融资轮次、IPO、公司估值 |
-| AI政策与监管 | 各国AI法规、反垄断、政府政策 |
-| AI商业应用 | 机器人、自动驾驶、医疗、企业软件 |
-| AI安全伦理 | 数据泄露、隐私、深度伪造、伦理风险 |
-
----
-
-## 文件说明
+Or in English:
 
 ```
-├── skill.md           # 技能定义文件（Claude Code 读取）
+Generate my AI daily
+Show me today's AI news
+```
+
+Claude Code will guide you through three steps:
+
+1. **Enter NewsAPI Key** (first-time only)
+2. **Run fetch script**: Download 30 days of AI news → `news_raw.json`
+3. **Run generate script**: Output a beautiful HTML daily report
+
+Output file: `AI日报-YYYYMMDD.html` (or `AI-Daily-YYYYMMDD.html`). Open in any browser.
+
+---
+
+## News Tag System
+
+| Tag | Coverage |
+|-----|----------|
+| AI模型与技术 | Model releases, benchmarks, research breakthroughs |
+| AI基础设施 | Data centers, GPUs, chips, cloud services |
+| AI融资与估值 | Funding rounds, IPOs, company valuations |
+| AI政策与监管 | AI regulations, antitrust, government policies |
+| AI商业应用 | Robots, autonomous driving, healthcare, enterprise software |
+| AI安全伦理 | Data leaks, privacy, deepfakes, ethical risks |
+
+---
+
+## File Structure
+
+```
+├── skill.md           # Skill definition (read by Claude Code)
 ├── scripts/
-│   ├── fetch_news.py  # 新闻抓取脚本（NewsAPI + RSS）
-│   └── gen_daily.py   # HTML日报生成脚本
+│   ├── fetch_news.py  # News fetcher (NewsAPI + RSS)
+│   └── gen_daily.py   # HTML report generator
 └── evals/
-    └── evals.json     # 评测配置
+    └── evals.json     # Eval configuration
 ```
 
 ---
 
-## 环境要求
+## Requirements
 
 - Python 3.8+
-- `requests` 库
-- （可选）`feedparser` 库，用于RSS订阅
+- `requests` library
+- (Optional) `feedparser` for RSS subscription support
 
 ```bash
 pip install requests feedparser
@@ -99,8 +106,12 @@ pip install requests feedparser
 
 ---
 
-## 翻译为中文
+## Translate to Chinese
 
-生成的是英文页面。用 **Edge 浏览器**打开 `AI日报-YYYYMMDD.html`，点击地址栏右侧的翻译图标，一键翻译全页。
+The report is generated in English. Open `AI日报-YYYYMMDD.html` with **Edge browser**, click the translate icon in the address bar — the entire page translates with one click.
 
 ---
+
+## License
+
+MIT License · Free to use, modify, and share
