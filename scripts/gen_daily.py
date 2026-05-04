@@ -1468,7 +1468,7 @@ def generate_html(articles, today_str):
 
 def main():
 
-    json_path = os.path.join(os.path.expanduser('~'), 'Desktop', 'news_raw.json')
+    json_path = "news_raw.json"
 
     if not os.path.exists(json_path):
 

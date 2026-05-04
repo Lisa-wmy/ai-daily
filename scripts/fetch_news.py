@@ -504,7 +504,7 @@ if __name__ == "__main__":
     print("[INFO] Fetching AI news (last 30 days) from NewsAPI + RSS...")
     articles = fetch_ai_news()
     if articles:
-        out_path = os.path.join(os.path.expanduser("~"), "Desktop", "news_raw.json")
+        out_path = "news_raw.json"
         with open(out_path, "w", encoding="utf-8") as f:
             json.dump(articles, f, ensure_ascii=False, indent=2)
         print(f"\n[OK] Saved {len(articles)} articles to {out_path}")
