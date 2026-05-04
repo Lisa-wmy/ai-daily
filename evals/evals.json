@@ -1,0 +1,23 @@
+{
+  "skill_name": "ai-daily",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "给我生成一份今天的AI日报",
+      "expected_output": "生成一个HTML文件，文件名为 AI日报-YYYYMMDD.html，包含3-5条AI资讯，每条有标题、摘要、来源、标签，风格为深色卡片设计",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "我要看最近24小时的AI行业动态，做个汇总",
+      "expected_output": "生成HTML日报，包含近期最重要的AI资讯，标注来源媒体，中文摘要50-100字，含关键词标签",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "帮我整理一下今天国内外有哪些重要的AI新闻",
+      "expected_output": "输出AI日报HTML，覆盖国内外AI媒体来源，卡片式布局，包含3-5条精选资讯",
+      "files": []
+    }
+  ]
+}
