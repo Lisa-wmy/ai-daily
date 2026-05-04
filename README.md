@@ -110,8 +110,3 @@ pip install requests feedparser
 
 The report is generated in English. Open `AI日报-YYYYMMDD.html` with **Edge browser**, click the translate icon in the address bar — the entire page translates with one click.
 
----
-
-## License
-
-MIT License · Free to use, modify, and share
